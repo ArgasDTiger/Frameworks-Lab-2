@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TODO App</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container center">
+      <h1 class="">My TODO App</h1>
+      <div class="todo-info">
+        <span>Item count: <span id="item-count">0</span></span>
+        <span>Unchecked count: <span id="unchecked-count">0</span></span>
+      </div>
+      <button id="add-todo-btn" onClick="onAddTodo()">New TODO</button>
+      <input id="todo-input" type="text">
+      <ul id="todo-list" class="todo-list">
+
+      </ul>
+    </div>
+
+    <div id="myModal" class="modal">
+
+      <div class="modal-content">
+        <div class="modal-body">
+          <h2>Enter new name for your todo:</h2>
+          <div class="input-group">
+            <input id="modal-input" type="text">
+            <button id="modal-save">Save</button>
+            <input id="modal-hidden" type="hidden">
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

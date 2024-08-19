@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100vh;
+  background-color: aquamarine;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#add-todo-btn {
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #b7ffe3;
+  cursor: pointer;
+}
+
+.todo-info > * {
+  padding: 0.5rem 5rem;
+}
+
+#todo-input {
+  width: 60vw;
+  background-color: #b7ffe3;
+  color: #2c3b3e;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  display: flex;
+  margin: 0;
+}
+
+.todo-item {
+  width: 70vw;
+  height: 2rem;
+  border-radius: 2rem;
+  border-color: aqua;
+  background-color: #3ad2f1;
+  cursor: pointer;
+  padding: 0.5rem 0.5rem 0.5rem 7vw;
+}
+
+.todo-item:hover {
+  background-color: #42c5e8;
+
+}
+
+.btn-group {
+  width: 20vw;
+  padding: 1rem;
+  margin-right: -20vw;
+  margin-top: 0.4rem;
+  z-index: 2;
+}
+
+.btn-group > * {
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  background-color: aqua;
+  border-color: aqua;
+}
+
+.input-group {
+  display: flex;
+}
+
+.input-group button {
+  cursor: pointer;
+}
+
+.completed-todo {
+  text-decoration: line-through;
+  background-color: #c5deea;
+}
+
+/*
+=========================
+  Modals
+=========================
+*/
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  z-index: 10;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+.modal-body {
+  padding: 20px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+/*
+=========================
+  Media Query
+=========================
+*/
+@media screen and (max-width: 932px) {
+  .btn-group {
+    margin-right: -18.5vw;
+  }
+}
